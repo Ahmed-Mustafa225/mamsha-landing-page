@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,84 +8,89 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Mamsha Contact from</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
+
 <body>
+
     <head>
         <!--navbar-->
         <div class="navigation">
-        <nav class=nav-bar>
-              <img src="img/WhatsApp Image 2021-06-15 at 11.35.41 AM.jpg" width="50" height="50" alt="logo">
-              <h2>شقق بأقساط شهرية بأرقي اماكن الشارقة</h2>
-          </nav>
+            <nav class=nav-bar>
+                <img src="img/WhatsApp Image 2021-06-15 at 11.35.41 AM.jpg" width="50" height="50" alt="logo">
+                <h2>شقق بأقساط شهرية بأرقي اماكن الشارقة</h2>
+            </nav>
         </div>
     </head>
 
     <!--pro-info-->
 
     <div class="projict-info">
-             <h1>بدون دفعة اولي
-             <br>
-                بدون دفعة تسليم</h1>
-             <h2> أقساط علي 7 سنوات من المطور مباشرة</h2>
-             <br>
-             <img src="img/Swimming Pool Render - Al Mamsha Raseel.jpg" alt="exterior-design" width="1000" height="700">
+        <h1>بدون دفعة اولي
+            <br>
+            بدون دفعة تسليم
+        </h1>
+        <h2> أقساط علي 7 سنوات من المطور مباشرة</h2>
+        <br>
+        <img src="img/Swimming Pool Render - Al Mamsha Raseel.jpg" alt="exterior-design" width="1000" height="700">
     </div>
 
 
     <!-- contact form-->
     <div class="Container">
-        <form onsubmit="sendEmail(); rest(); return false;">
-                <h3>GIT INTOUCH</h3>
-                <br>
-                <label for="name">الاسم</label>
-                <input type="text" id="name" placeholder="name" required>
-                <label for="name">رقم الهاتف</label>
-                <input type="text" id="phone-number" placeholder="phone-number" required>
-                <label for="name">الامارة</label>
-                <input type="text" id="emirate" placeholder="emirate" required>
-                <label for="name">البريد الإلكتروني</label>
-                <input type="email" id="email" placeholder="email">
-                <br>
-                <label for="name">اكتب استفسارك</label>
-                <textarea name="messgae" id="messgae" rows="5" placeholder="اكتب استفسارك"></textarea>
-                <br>
-                <button type="submit">ارسال</button>
+        <form>
+            <h3>GIT INTOUCH</h3>
+            <br>
+            <label for="name">الاسم</label>
+            <input type="text" id="name" placeholder="name" required>
+            <label for="name">رقم الهاتف</label>
+            <input type="text" id="phone-number" placeholder="phone-number" required>
+            <label for="name">الامارة</label>
+            <input type="text" id="emirate" placeholder="emirate" required>
+            <label for="name">البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="email">
+            <br>
+            <label for="name">اكتب استفسارك</label>
+            <textarea name="messgae" id="messgae" rows="5" placeholder="اكتب استفسارك"></textarea>
+            <br>
+            <button onclick="sendEmail()">ارسال</button>
 
         </form>
 
     </div>
-    
+
     <!--Fotter-->
     <footer>
         <div>
-        Made by  <strong>DEIAMOND BRICKS</strong> Realestate marketing department 
-        <br>
-        &#169; All copyright are reserved
-        <a href="https://diamondbricksllc.info/privacy-policy/">Privacy policy</a>
-    </div>
+            Made by <strong>DEIAMOND BRICKS</strong> Realestate marketing department
+            <br>
+            &#169; All copyright are reserved
+            <a href="https://diamondbricksllc.info/privacy-policy/">Privacy policy</a>
+        </div>
     </footer>
 
 
     <!--function-->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-        function sendEmail(){
-            Email.send({          
-                Host : "smtp.google.com",
-                Username : "marketing.leads.number@gmail.com",
-                Password : "Dare_devil_300",
-                To : 'ahmed.mostafa@diamondbricksllc.com',
-                From : document.getElementById("email").value,
-                Subject : "new lead mamsha 7 years offer ",
-                Body : "Name: " +   document.getElementById("name").value
-                + "<br> Emil " + document.getElementById("Email").value
-                + "<br> phone-number " + document.getElementById("phone-number").value
-                + "<br> messgae " + document.getElementById("messgae").value
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.google.com",
+                Username: "marketing.leads.number@gmail.com",
+                Password: "Dare_devil_300",
+                To: 'ahmed.mostafa@diamondbricksllc.com',
+                From: document.getElementById("email").value,
+                Subject: "new lead mamsha 7 years offer ",
+                Body: "Name: " + document.getElementById("name").value
+                    + "<br> Emil " + document.getElementById("email").value
+                    + "<br> phone-number " + document.getElementById("phone-number").value
+                    + "<br> messgae " + document.getElementById("messgae").value
             }).then(
-            message => alert(message)
+                message => alert(message)
             );
-                    }
+            console.log("done")
+        }
 
     </script>
 </body>
+
 </html>
