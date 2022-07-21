@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: gray;
+}
+.nav-bar{
+    background-color: black;
+    padding-left: 100px;
+    position:fixed;
+    width: 100%;
+    z-index: 999;
+    color: aliceblue;
+    display: flex;
+}
+
+.projict-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding-top: 100px;
+    font-size: large;
+    font-weight: 700;
+}
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+    width: 300px;
+    margin: 10px;
+    padding: 2vw 4vw;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+form h3{
+    color: blue;
+}
+
+form, input{
+    width: 80%;
+    border-radius: 5px;
+}
+form input, form textarea{
+    width: 80%;
+    border-radius: 5px;
+}
+
+button{
+    padding: 15px;
+    font-size: medium;
+    width: 150px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(71, 120, 224);
+    color: aliceblue;
+    font-size: 1em;
+    font-size: large;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:aliceblue
+}
